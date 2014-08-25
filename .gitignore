@@ -1,3 +1,6 @@
+# Rubymine
+/.idea
+
 *.gem
 *.rbc
 .bundle
