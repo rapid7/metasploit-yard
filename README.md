@@ -1,4 +1,4 @@
-# Metasploit::Yard
+# Metasploit::Yard [![Build Status](https://travis-ci.org/rapid7/metasploit-yard.svg?branch=master)](https://travis-ci.org/rapid7/metasploit-yard)
 
 TODO: Write a gem description
 
