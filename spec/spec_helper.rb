@@ -1,5 +1,8 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
+# require before 'metasploit/version' so coverage is shown for files required by 'metasploit/version'
+require 'simplecov'
+
 require 'metasploit/yard'
 
 RSpec.configure do |config|
