@@ -7,8 +7,9 @@ RSpec.describe Metasploit::Yard do
         described_class::VERSION
       }
 
-      it { is_expected.to be_a String }
-      it { is_expected.to match_regex(/\d+.\d+.\d+(-[a-zA-Z0-9]+)*/) }
+      it 'is Metasploit::Yard::Version.full' do
+        expect(version).to eq(Metasploit::Yard::Version.full)
+      end
     end
   end
 end
