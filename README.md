@@ -1,4 +1,4 @@
-# Metasploit::Yard [![Build Status](https://travis-ci.org/rapid7/metasploit-yard.svg?branch=master)](https://travis-ci.org/rapid7/metasploit-yard)[![Code Climate](https://codeclimate.com/github/rapid7/metasploit-yard.png)](https://codeclimate.com/github/rapid7/metasploit-yard)
+# Metasploit::Yard [![Build Status](https://travis-ci.org/rapid7/metasploit-yard.svg?branch=master)](https://travis-ci.org/rapid7/metasploit-yard)[![Code Climate](https://codeclimate.com/github/rapid7/metasploit-yard.png)](https://codeclimate.com/github/rapid7/metasploit-yard)[![Test Coverage](https://codeclimate.com/github/rapid7/metasploit-yard/badges/coverage.svg)](https://codeclimate.com/github/rapid7/metasploit-yard)
 
 TODO: Write a gem description
 
