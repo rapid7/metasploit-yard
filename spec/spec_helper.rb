@@ -2,6 +2,7 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 # require before 'metasploit/version' so coverage is shown for files required by 'metasploit/version'
 require 'codeclimate-test-reporter'
+require 'coveralls'
 require 'simplecov'
 
 if ENV['TRAVIS'] == 'true'
