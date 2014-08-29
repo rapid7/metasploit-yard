@@ -49,6 +49,20 @@ And then execute:
 Or install it yourself as:
 
     $ gem install metasploit-yard
+    
+### Rakefile
+
+Add the following to your `Rakefile` to load `yard.rake` from `metasploit-yard`
+
+    gem_specification = Gem::Specification.find_by_name('metasploit-yard')
+
+    Dir[File.join(gem_specification.gem_dir, 'lib', 'tasks', '**', '*.rake')].each do |rake|
+      load rake
+    end
+
+## Usage
+
+    $ rake yard
 
 ## Contributing
 
