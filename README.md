@@ -49,8 +49,16 @@ And then execute:
 Or install it yourself as:
 
     $ gem install metasploit-yard
-    
-### Rakefile
+
+## Setup
+
+### With Rails
+
+`metasploit-yard` has a `Rails::Railtie`, [`Metasploit::Yard::Railtie`](lib/metasploit/yard/railtie) that will
+automatically be loaded if `Rails` is defined when `metasploit/yard` is required.  `Metasploit::Yard::Railtie` will
+automatically load [`yard.rake`](lib/tasks/yard.rake) for your Rails project.
+
+### Without Rails
 
 Add the following to your `Rakefile` to load `yard.rake` from `metasploit-yard`
 
