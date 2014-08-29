@@ -3,7 +3,9 @@ require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-Dir['lib/tasks/**/*.rake'].each do |rake|
+gem_specification = Gem::Specification.find_by_name('metasploit-yard')
+
+Dir[File.join(gem_specification.gem_dir, 'lib', 'tasks', '**', '*.rake')].each do |rake|
   load rake
 end
 
