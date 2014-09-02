@@ -1,5 +1,5 @@
 require 'aruba/cucumber'
 
 Before do
-  @aruba_timeout_seconds = 60
+  @aruba_timeout_seconds = 2.minutes
 end
