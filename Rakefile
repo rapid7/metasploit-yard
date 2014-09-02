@@ -9,9 +9,10 @@ end
 
 RSpec::Core::RakeTask.new(:spec)
 
-gem_specification = Gem::Specification.find_by_name('metasploit-yard')
+root = Pathname.new(__FILE__).parent
+rake_glob = root.join('lib', 'tasks', '**', '*.rake')
 
-Dir[File.join(gem_specification.gem_dir, 'lib', 'tasks', '**', '*.rake')].each do |rake|
+Dir[rake_glob].each do |rake|
   load rake
 end
 
