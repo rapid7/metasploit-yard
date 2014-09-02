@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Metasploit::Yard::VERSION
   spec.authors       = ["Luke Imhoff"]
   spec.email         = ["luke_imhoff@rapid7.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "yard rake tasks"
+  spec.description   = "YARD rake tasks used through the metasploit-* gem namespace"
+  spec.homepage      = "https://github.com/rapid7/"
   spec.license       = "BSD-3-Clause"
 
   spec.files         = `git ls-files`.split($/)
