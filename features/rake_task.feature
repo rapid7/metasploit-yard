@@ -5,7 +5,7 @@ Feature: yard.rake
   As a developer calling `rake yard`
   I want `yard.rake` loaded from `metasploit-yard`
 
-  Scenario: Without rails
+  Scenario: Without Rails
     Given I create a clean gemset "without_rails_use_metasploit_yard"
     And I use gemset "without_rails_use_metasploit_yard"
     And I successfully run `bundle gem without_rails_use_metasploit_yard`
@@ -23,7 +23,7 @@ Feature: yard.rake
         spec.authors       = ['Luke Imhoff']
         spec.email         = ['luke_imhoff@rapid7.com']
         spec.summary       = 'Uses metasploit-yard without Rails'
-        spec.license       = 'MIT'
+        spec.license       = 'BSD-3-Clause'
 
         spec.files         = `git ls-files -z`.split("\x0")
         spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -52,4 +52,25 @@ Feature: yard.rake
       Undocumented Objects:
       WithoutRailsUseMetasploitYard              (lib/without_rails_use_metasploit_yard.rb:3)
       WithoutRailsUseMetasploitYard::VERSION     (lib/without_rails_use_metasploit_yard/version.rb:2)
+      """
+
+  @announce
+  Scenario: With a Rails Application
+    Given I create a clean gemset "rails_application_use_metasploit_yard"
+    And I use gemset "rails_application_use_metasploit_yard"
+    And I successfully run `gem install rails`
+    And I successfully run `rails new rails_application_use_metasploit_yard --skip-action-view --skip-active-record --skip-javascript --skip-spring --skip-sprockets --skip-test-unit`
+    And I cd to "rails_application_use_metasploit_yard"
+    And I append to "Gemfile" with:
+      """
+      gem 'metasploit-yard', group: :development
+      """
+    And I install the project gem locally
+    And I successfully run `bundle install`
+    When I successfully run `rake yard`
+    Then the output should contain:
+      """
+      Undocumented Objects:
+      ApplicationController     (app/controllers/application_controller.rb:1)
+      ApplicationHelper         (app/helpers/application_helper.rb:1)
       """
