@@ -10,6 +10,7 @@ rvm:
   - '2.0'
   - '2.1'
   - 'ruby-head'
-  - 'jruby-19mode'
+  # jruby fails rake cucumber (see MSP-11240)
+  # - 'jruby-19mode'
   - 'rbx-2.2'
 script: "bundle exec rake $RAKE_TASK"
