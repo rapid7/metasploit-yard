@@ -89,10 +89,10 @@ module Metasploit::Yard::Aruba::RvmEnv
     parsed
   end
 
-  # Converts output of {#parse} into Hash that maps {Metasploit::Yard::Aruba::RvmEnv::Variable#name} to the
+  # Converts output of {parse} into Hash that maps {Metasploit::Yard::Aruba::RvmEnv::Variable#name} to the
   # {Metasploit::Yard::Aruba::RvmEnv::Variable}.
   #
-  # @param parsed [Array<Metasploit::Yard::Aruba::RvmEnv::Variable>] output of {#parse}.
+  # @param parsed [Array<Metasploit::Yard::Aruba::RvmEnv::Variable>] output of {parse}.
   # @return [Hash{String => Metasploit::Yard::Aruba::RvmEnv::Variable}] Map of
   #   {Metasploit::Yard::Aruba::RvmEnv::Variable#name} to the {Metasploit::Yard::Aruba::RvmEnv::Variable}.
   def self.parsed_to_hash(parsed)

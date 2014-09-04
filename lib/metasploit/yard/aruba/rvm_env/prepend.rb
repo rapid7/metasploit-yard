@@ -21,7 +21,7 @@ class Metasploit::Yard::Aruba::RvmEnv::Prepend < Metasploit::Yard::Aruba::RvmEnv
   # the environment variable.
   REGEXP = /\Aexport (?<name>.*?)=(?<quote>"|')(?<value>.*?#{File::PATH_SEPARATOR})\$\k<name>\k<quote>\Z/
 
-  # Replaces {Metasploit::Yard::Aruba::RvmEnv::Prepend#value `:from` value} with
+  # Replaces {Metasploit::Yard::Aruba::RvmEnv::Export#value `:from` value} with
   # {Metasploit::Yard::Aruba::RvmEnv::Export#value this variable's value}.
   #
   # @param options [Hash{Symbol => Object}]
