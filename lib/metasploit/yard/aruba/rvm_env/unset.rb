@@ -10,6 +10,7 @@ require 'active_support/core_ext/hash/keys'
 
 require 'metasploit/yard/aruba/rvm_env/variable'
 
+# Recognizes `unset`s of environment variables.
 class Metasploit::Yard::Aruba::RvmEnv::Unset < Metasploit::Yard::Aruba::RvmEnv::Variable
   #
   # CONSTANTS

@@ -64,6 +64,10 @@ class Metasploit::Yard::Aruba::RvmEnv::Export < Metasploit::Yard::Aruba::RvmEnv:
     @value = attributes[:value]
   end
 
+  # Whether this export is the same class and has the same {#value} as `other`.
+  #
+  # @return [true] if `other.class` is `Metasploit::Yard::Aruba::RvmEnv::Export` and `other.value` is {#value}.
+  # @return [false] otherwise
   def ==(other)
     super(other) && other.value == self.value
   end
