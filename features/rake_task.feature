@@ -54,7 +54,6 @@ Feature: yard.rake
       WithoutRailsUseMetasploitYard::VERSION     (lib/without_rails_use_metasploit_yard/version.rb:2)
       """
 
-  @announce
   Scenario: With a Rails Application
     Given I create a clean gemset "rails_application_use_metasploit_yard"
     And I use gemset "rails_application_use_metasploit_yard"
