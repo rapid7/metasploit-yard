@@ -45,13 +45,24 @@ Feature: yard.rake
       """
     And I install the project gem locally
     And I successfully run `bundle install`
-    When I successfully run `rake yard`
+    When I run `rake yard`
     Then the output should contain:
       """
       Undocumented Objects:
       WithoutRailsUseMetasploitYard              (lib/without_rails_use_metasploit_yard.rb:3)
       WithoutRailsUseMetasploitYard::VERSION     (lib/without_rails_use_metasploit_yard/version.rb:2)
       """
+    And the stderr from "rake yard" should contain:
+      """
+      Documentation percentage (0.00%) below threshold (100.00%)
+      """
+    # Don't do this in a different scenario because it takes minutes to setup a new gem project
+    Given a file named "config/yard-stats-threshold" with:
+      """
+      0.0
+      """
+    When I successfully run `rake yard`
+    Then the output from "rake yard" should not contain "below threshold"
 
   @travis-ci-wip
   Scenario: With a Rails Application
@@ -66,6 +77,10 @@ Feature: yard.rake
       """
     And I install the project gem locally
     And I successfully run `bundle install`
+    And a file named "config/yard-stats-threshold" with:
+      """
+      0.0
+      """
     When I successfully run `rake yard`
     Then the output should contain:
       """
