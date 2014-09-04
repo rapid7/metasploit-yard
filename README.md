@@ -73,6 +73,16 @@ Add the following to your `Rakefile` to load `yard.rake` from `metasploit-yard`
 
     $ rake yard
 
+### CI Integration
+
+`rake yard` will automatically call `rake yard:stats`.  `rake yard:stats` will exit with status `0` only if there are
+no undocumented objects.  If there are undocumented objects, then `rake yard:stats` will exist with status `1`.  If
+you want to lower the threshold of undocumented objects that are allowed from `100.0` percentage, set the value in
+`config/yard-stats-threshold` as a float.
+
+By adding `rake yard:stats` to the tasks run by your CI server, you can have your build fail if documentation slips
+below the threshold.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
