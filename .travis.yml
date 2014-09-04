@@ -5,6 +5,11 @@ env:
     - RAKE_TASK=cucumber
     - RAKE_TASK=spec
 language: ruby
+matrix:
+  # documentation coverage is not influenced by ruby implementation, so only run once
+  include:
+    - rvm: 2.1
+      env: RAKE_TASK=yard
 rvm:
   - '1.9.3'
   - '2.0'
