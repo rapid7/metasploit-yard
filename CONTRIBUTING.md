@@ -142,12 +142,6 @@ If your changes are incompatible with the previous branch's API, then increment 
 
 - [ ] Following the rules for [semantic versioning 2.0](http://semver.org/spec/v2.0.0.html), update [`MINOR`](lib/metasploit/yard/version.rb) and [`PATCH`](lib/metasploit/yard/version.rb) and commit the changes.
 
-## JRuby
-- [ ] `rvm use jruby@metasploit-yard`
-- [ ] `rm Gemfile.lock`
-- [ ] `bundle install`
-- [ ] `rake release`
-
 ## MRI Ruby
 - [ ] `rvm use ruby-2.1@metasploit-yard`
 - [ ] `rm Gemfile.lock`
