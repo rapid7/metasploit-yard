@@ -1,4 +1,3 @@
-@gemset
 Feature: yard.rake
 
   In order to generate documentation for metasploit projects, but not end up with multiple actions for the `yard` rake tasks
