@@ -30,4 +30,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'rake'
   spec.add_runtime_dependency 'yard'
+
+  # Ruby 1.9 JSON Hash syntax is used
+  spec.required_ruby_version = '>= 1.9'
 end
