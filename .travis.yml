@@ -3,7 +3,7 @@ env:
     - secure: "IxVtzpee/XU/Qkw9g88uXX9GtQkzeUNVx05LYpfBuZWjQZWggrTp4k91HyquBNZkg30I5l7iHLbuhMB2c2SyNPN1OfkkhWZjeerJzRtaGDn7RXTAfdKUCtDceZPnl9Kv4Wbk6I2pVsXpROOP0VaPjLgod7aJqHfnw4AvP8yZbDg="
   matrix:
     - RAKE_TASK=cucumber
-    - RAKE_SPEC=spec
+    - RAKE_TASK=spec
 language: ruby
 rvm:
   - '1.9.3'
