@@ -27,6 +27,11 @@ namespace :yard do
     stats.run('--compact', '--list-undoc')
 
     threshold = 100.0
+    threshold_path = 'config/yard-stats-threshold'
+
+    if File.exist?(threshold_path)
+      threshold = File.read(threshold_path).to_f
+    end
 
     # duplicates end of YARD::CLI::Stats#print_statistics
     # @see https://github.com/lsegal/yard/blob/76c7525f46df38f7b24d4b3cb9daeef512fe58e8/lib/yard/cli/stats.rb#L63-L69
