@@ -1,0 +1,6 @@
+---
+<% if ENV['TRAVIS'] == 'true' %>
+default: --format pretty --tags ~@travis-ci-wip
+<% else %>
+default: --format pretty
+<% end %>

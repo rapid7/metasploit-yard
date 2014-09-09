@@ -28,7 +28,7 @@ and the `PRERELEASE` section of `Metasploit::Yard::VERSION` does not exist.
 
 Add this line to your application's `Gemfile`:
 
-    gem 'metasploit-yard'    
+    gem 'metasploit-yard', group: :development
 
 And then execute:
 
@@ -49,6 +49,39 @@ And then execute:
 Or install it yourself as:
 
     $ gem install metasploit-yard
+
+## Setup
+
+### In a Rails::Application
+
+`metasploit-yard` has a `Rails::Railtie`, [`Metasploit::Yard::Railtie`](lib/metasploit/yard/railtie) that will
+automatically be loaded if `Rails` is defined when `metasploit/yard` is required.  `Metasploit::Yard::Railtie` will
+automatically load [`yard.rake`](lib/tasks/yard.rake) for your Rails project.
+
+### In a Rails::Engine or non-Rails gem
+
+Add the following to your `Rakefile` to load `yard.rake` from `metasploit-yard`
+
+    # Use find_all_by_name instead of find_by_name as find_all_by_name will return pre-release versions
+    gem_specification = Gem::Specification.find_all_by_name('metasploit-yard').first
+
+    Dir[File.join(gem_specification.gem_dir, 'lib', 'tasks', '**', '*.rake')].each do |rake|
+      load rake
+    end
+
+## Usage
+
+    $ rake yard
+
+### CI Integration
+
+`rake yard` will automatically call `rake yard:stats`.  `rake yard:stats` will exit with status `0` only if there are
+no undocumented objects.  If there are undocumented objects, then `rake yard:stats` will exist with status `1`.  If
+you want to lower the threshold of undocumented objects that are allowed from `100.0` percentage, set the value in
+`config/yard-stats-threshold` as a float.
+
+By adding `rake yard:stats` to the tasks run by your CI server, you can have your build fail if documentation slips
+below the threshold.
 
 ## Contributing
 

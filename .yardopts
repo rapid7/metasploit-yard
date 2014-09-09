@@ -1,0 +1,7 @@
+--markup markdown
+--private
+--protected
+{app,lib}/**/*.rb
+-
+CONTRIBUTING.md
+README.md

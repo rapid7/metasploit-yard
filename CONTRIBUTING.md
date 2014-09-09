@@ -57,6 +57,10 @@ Push your branch to your fork on gitub: `git push push TYPE/ISSUE/SUMMARY`
 
 - [ ] `bundle install`
 
+## `rake cucumber`
+- [ ] `rake cucumber`
+- [ ] VERIFY no failures
+
 ## `rake spec`
 - [ ] `rake spec`
 - [ ] VERIFY no failures
@@ -128,21 +132,31 @@ Complete these steps on DESTINATION
 
 ## `VERSION`
 
-### Compatible changes
+### Incompatible API changes
 
-If your change are compatible with the previous branch's API, then increment [`PATCH`](lib/metasploit/yard/version.rb).
+If your changes are incompatible with the previous branch's API, such as removing APIs or removing parts of API
+signatures:
 
-### Incompatible changes
+- [ ] Increment [`MAJOR`](lib/metasploit/yard/version.rb)
+- [ ] Reset [`MINOR`](lib/metasploit/yard/version.rb) to `0`
+- [ ] Reset [`PATCH`](lib/metasploit/yard/version.rb) to `0`
+- [ ] Commit
 
-If your changes are incompatible with the previous branch's API, then increment [`MINOR`](lib/metasploit/yard/version.rb) and reset [`PATCH`](lib/metasploit/yard/version.rb) to `0`.
+### Compatible API changes
 
-- [ ] Following the rules for [semantic versioning 2.0](http://semver.org/spec/v2.0.0.html), update [`MINOR`](lib/metasploit/yard/version.rb) and [`PATCH`](lib/metasploit/yard/version.rb) and commit the changes.
+If your changes are compatible with the previous branch's API, such as adding an API or adding options or optional
+positional arguments to an API:
 
-## JRuby
-- [ ] `rvm use jruby@metasploit-yard`
-- [ ] `rm Gemfile.lock`
-- [ ] `bundle install`
-- [ ] `rake release`
+- [ ] Increment [`MINOR`](lib/metasploit/yard/version.rb)
+- [ ] Reset [`PATCH`](lib/metasploit/yard/version.rb) to `0`.
+- [ ] Commit
+
+### Compatible bug fixes
+
+If your changes are a bug fix that don't impact the APIs, then:
+
+- [ ] Increment [`PATCH`](lib/metasploit/yard/version.rb)
+- [ ] Commit
 
 ## MRI Ruby
 - [ ] `rvm use ruby-2.1@metasploit-yard`
