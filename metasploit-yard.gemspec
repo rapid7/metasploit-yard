@@ -29,6 +29,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov'
 
   spec.add_runtime_dependency 'rake'
+  # markdown library for YARD to enable proper parsing of README.md and CONTRIBUTING.md
+  spec.add_runtime_dependency 'redcarpet'
   spec.add_runtime_dependency 'yard'
 
   # Ruby 1.9 JSON Hash syntax is used
