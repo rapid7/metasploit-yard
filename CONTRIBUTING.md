@@ -158,6 +158,12 @@ If your changes are a bug fix that don't impact the APIs, then:
 - [ ] Increment [`PATCH`](lib/metasploit/yard/version.rb)
 - [ ] Commit
 
+## JRuby
+- [ ] `rvm use jruby@metasploit-yard`
+- [ ] `rm Gemfile.lock`
+- [ ] `bundle install`
+- [ ] `rake release`
+
 ## MRI Ruby
 - [ ] `rvm use ruby-2.1@metasploit-yard`
 - [ ] `rm Gemfile.lock`
