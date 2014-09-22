@@ -7,7 +7,7 @@ class Metasploit::Yard::Aruba::RvmEnv::Prepend < Metasploit::Yard::Aruba::RvmEnv
   # Matches line with format `export <name>=<quote><value>$<name><quote>`.  `<value>` will contain trailing
   # `File::PATH_SEPARATOR`, so it can be directly prepended to the current value of `<name>` to get the value to set
   # the environment variable.
-  REGEXP = /\Aexport (?<name>.*?)=(?<quote>"|')(?<value>.*?#{File::PATH_SEPARATOR})\$\k<name>\k<quote>\Z/
+  REGEXP = /\Aexport (?<name>\S+?)(\s+;\s+\k<name>)?=(?<quote>"|')(?<value>.*?#{File::PATH_SEPARATOR})\$\k<name>\k<quote>\Z/
 
   # Replaces {Metasploit::Yard::Aruba::RvmEnv::Export#value `:from` value} with
   # {Metasploit::Yard::Aruba::RvmEnv::Export#value this variable's value}.

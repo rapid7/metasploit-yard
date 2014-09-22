@@ -5,7 +5,7 @@ class Metasploit::Yard::Aruba::RvmEnv::Export < Metasploit::Yard::Aruba::RvmEnv:
   #
 
   # Matches line with format `export <name>=<quote><value><quote>`
-  REGEXP = /\Aexport (?<name>.*?)=(?<quote>"|')(?<value>.*?)\k<quote>\Z/
+  REGEXP = /\Aexport (?<name>\S+?)(\s+;\s+\k<name>)?=(?<quote>"|')(?<value>.*?)\k<quote>\Z/
 
   #
   # Attributes
