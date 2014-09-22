@@ -1,15 +1,3 @@
-#
-# Gems
-#
-
-require 'active_support/core_ext/hash/keys'
-
-#
-# Project
-#
-
-require 'metasploit/yard/aruba/rvm_env'
-
 # Recognizes `export`s that are actually prepending values to the pre-existing value as is the case with `PATH`.
 class Metasploit::Yard::Aruba::RvmEnv::Prepend < Metasploit::Yard::Aruba::RvmEnv::Export
   #

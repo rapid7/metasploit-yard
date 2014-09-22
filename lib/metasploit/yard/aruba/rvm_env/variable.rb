@@ -1,15 +1,3 @@
-#
-# Gems
-#
-
-require 'active_support/core_ext/hash/keys'
-
-#
-# Project
-#
-
-require 'metasploit/yard/aruba/rvm_env'
-
 # An environment variable in `rvm env`.
 class Metasploit::Yard::Aruba::RvmEnv::Variable
   #

@@ -1,5 +1,3 @@
-require 'rails/railtie'
-
 module Metasploit
   module Yard
     # Automatically loads `yard.rake` for any Rails project.

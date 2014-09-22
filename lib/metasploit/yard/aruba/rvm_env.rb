@@ -2,19 +2,21 @@
 # Gems
 #
 
+require 'active_support/dependencies/autoload'
 require 'active_support/core_ext/hash/keys'
 
 #
 # Project
 #
 
-require 'metasploit/yard/aruba'
-
 # Helpers for parsing `rvm env` output
 module Metasploit::Yard::Aruba::RvmEnv
-  require 'metasploit/yard/aruba/rvm_env/export'
-  require 'metasploit/yard/aruba/rvm_env/prepend'
-  require 'metasploit/yard/aruba/rvm_env/unset'
+  extend ActiveSupport::Autoload
+
+  autoload :Export
+  autoload :Prepend
+  autoload :Unset
+  autoload :Variable
 
   #
   # CONSTANTS

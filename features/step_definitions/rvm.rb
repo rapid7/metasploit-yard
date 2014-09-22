@@ -1,5 +1,3 @@
-require 'metasploit/yard/aruba/rvm_env'
-
 Before do
   @gemsets_to_delete = []
 end

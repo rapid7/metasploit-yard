@@ -1,15 +1,3 @@
-#
-# Gems
-#
-
-require 'active_support/core_ext/hash/keys'
-
-#
-# Project
-#
-
-require 'metasploit/yard/aruba/rvm_env/variable'
-
 # Recognizes `export`s of a variable
 class Metasploit::Yard::Aruba::RvmEnv::Export < Metasploit::Yard::Aruba::RvmEnv::Variable
   #
