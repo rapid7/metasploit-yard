@@ -33,9 +33,14 @@ Gem::Specification.new do |spec|
   if RUBY_PLATFORM =~ /java/
     # markdown library for YARD to enable proper parsing of README.md and CONTRIBUTING.md
     spec.add_runtime_dependency 'kramdown'
+
+    # Cannot use Gem::Platform::JAVA as it is only defined by bundler, so `gem build *.gemspec` wouldn't work.
+    spec.platform = Gem::Platform.new('java')
   else
     # markdown library for YARD to enable proper parsing of README.md and CONTRIBUTING.md
     spec.add_runtime_dependency 'redcarpet'
+
+    spec.platform = Gem::Platform::RUBY
   end
 
   spec.add_runtime_dependency 'yard'
