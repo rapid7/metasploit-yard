@@ -16,7 +16,7 @@ RSpec.describe Metasploit::Yard::Aruba::RvmEnv::Prepend do
       }
 
       let(:value) {
-        '/Users/bob/.rvm/gems/ruby-1.9.3-p547@pro/bin:/Users/bob/.rvm/gems/ruby-1.9.3-p547@global/bin:/Users/bob/.rvm/rubies/ruby-1.9.3-p547/bin:/Users/bob/.rvm/bin:'
+        '/Users/bob/.rvm/gems/ruby-2.1.5@pro/bin:/Users/bob/.rvm/gems/ruby-2.1.5@global/bin:/Users/bob/.rvm/rubies/ruby-2.1.5/bin:/Users/bob/.rvm/bin:'
       }
 
       context 'with combined export and prepend' do

@@ -16,7 +16,7 @@ RSpec.describe Metasploit::Yard::Aruba::RvmEnv::Export do
       }
 
       let(:value) {
-        'ruby-1.9.3-p547@pro'
+        'ruby-2.1.5@pro'
       }
 
       context 'with combined export and set' do
