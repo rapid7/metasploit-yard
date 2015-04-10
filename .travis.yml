@@ -12,8 +12,8 @@ matrix:
       env: RAKE_TASK=yard
 rvm:
   - '2.1'
-  - 'ruby-head'
   # jruby fails rake cucumber (see MSP-11240)
   # - 'jruby-19mode'
-  - 'rbx-2.2'
 script: "bundle exec rake $RAKE_TASK"
+addons:
+  postgresql: '9.3'
