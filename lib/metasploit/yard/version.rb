@@ -8,7 +8,7 @@ module Metasploit
       MINOR = 0
       # The patch number, scoped to the {MINOR} version number.
       PATCH = 2
-
+      # The prerelease version, scoped to the {MAJOR}, {MINOR}, and {PATCH} version numbers.
       PRERELEASE = 'set-postgres93-travis'
 
       # The full version string, including the {MAJOR}, {MINOR}, {PATCH}, and optionally, the PRERELEASE in the
