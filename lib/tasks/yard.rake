@@ -53,6 +53,10 @@ namespace :yard do
   end
 end
 
+task :environment do
+  # stub task for when not run in a Rails project
+end
+
 # @todo Figure out how to just clone description from yard:doc
 desc "Generate YARD documentation"
 # allow calling namespace to as a task that goes to default task for namespace
