@@ -23,7 +23,8 @@ namespace :yard do
 
   desc "Shows stats for YARD Documentation including listing undocumented modules, classes, constants, and methods"
   task :stats => :environment do
-    stats = YARD::CLI::Stats.new
+    require 'metasploit/yard'
+    stats = Metasploit::Yard::CLI::Stats.new
     stats.run('--compact', '--list-undoc')
 
     threshold = 100.0

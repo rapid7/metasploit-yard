@@ -11,6 +11,7 @@ require 'metasploit/yard/version'
 module Metasploit
   # Namespace for this gem.
   module Yard
+    autoload :CLI, 'metasploit/yard/cli'
     autoload :Aruba, 'metasploit/yard/aruba'
 
     if defined?(Rails)
