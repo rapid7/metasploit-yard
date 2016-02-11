@@ -110,7 +110,7 @@ RSpec.describe Metasploit::Yard::Version do
       3
     end
 
-    before(:each) do
+    before(:example) do
       stub_const("#{described_class}::MAJOR", major)
       stub_const("#{described_class}::MINOR", minor)
       stub_const("#{described_class}::PATCH", patch)
@@ -121,7 +121,7 @@ RSpec.describe Metasploit::Yard::Version do
         'prerelease'
       end
 
-      before(:each) do
+      before(:example) do
         stub_const("#{described_class}::PRERELEASE", prerelease)
       end
 
@@ -131,7 +131,7 @@ RSpec.describe Metasploit::Yard::Version do
     end
 
     context 'without PRERELEASE' do
-      before(:each) do
+      before(:example) do
         hide_const("#{described_class}::PRERELEASE")
       end
 
