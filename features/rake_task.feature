@@ -9,7 +9,7 @@ Feature: yard.rake
     Given I create a clean gemset "without_rails_use_metasploit_yard"
     And I use gemset "without_rails_use_metasploit_yard"
     And I successfully run `gem install bundler`
-    And I successfully run `bundle gem without_rails_use_metasploit_yard --test=rspec` for up to 60 seconds
+    And I successfully run `bundle gem without_rails_use_metasploit_yard --test=rspec` for up to 240 seconds
     And I cd to "without_rails_use_metasploit_yard"
     And I overwrite "without_rails_use_metasploit_yard.gemspec" with:
       """
@@ -72,7 +72,7 @@ Feature: yard.rake
     Given I create a clean gemset "rails_application_use_metasploit_yard"
     And I use gemset "rails_application_use_metasploit_yard"
     And I successfully run `gem install rails`
-    And I successfully run `rails new rails_application_use_metasploit_yard --skip-action-view --skip-active-record --skip-javascript --skip-spring --skip-sprockets --skip-test-unit` for up to 60 seconds
+    And I successfully run `rails new rails_application_use_metasploit_yard --skip-action-view --skip-active-record --skip-javascript --skip-spring --skip-sprockets --skip-test-unit` for up to 240 seconds
     And I cd to "rails_application_use_metasploit_yard"
     And I append to "Gemfile" with:
       """
