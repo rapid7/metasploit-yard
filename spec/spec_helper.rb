@@ -5,18 +5,15 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 # require 'coveralls'
 require 'simplecov'
 
-if ENV['TRAVIS'] == 'true'
-  formatters = []
-
-  # don't use `CodeClimate::TestReporter.start` as it will overwrite some .simplecov settings
-  # if CodeClimate::TestReporter.run?
-  #   formatters << CodeClimate::TestReporter::Formatter
-  # end
-
+# if ENV['TRAVIS'] == 'true'
+#   # don't generate local report as it is inaccessible on travis-ci, which is why coveralls is being used.
+#   SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+# else
   SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    *formatters
+      # either generate the local report
+      SimpleCov::Formatter::HTMLFormatter
   ]
-end
+# end
 
 require 'metasploit/yard'
 
