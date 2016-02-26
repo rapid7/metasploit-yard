@@ -1,19 +1,8 @@
-env:
-  global:
-    - secure: "IxVtzpee/XU/Qkw9g88uXX9GtQkzeUNVx05LYpfBuZWjQZWggrTp4k91HyquBNZkg30I5l7iHLbuhMB2c2SyNPN1OfkkhWZjeerJzRtaGDn7RXTAfdKUCtDceZPnl9Kv4Wbk6I2pVsXpROOP0VaPjLgod7aJqHfnw4AvP8yZbDg="
-  matrix:
-    - RAKE_TASK=cucumber
-    - RAKE_TASK=spec
+group: stable
+sudo: false
 language: ruby
-matrix:
-  # documentation coverage is not influenced by ruby implementation, so only run once
-  include:
-    - rvm: 2.1
-      env: RAKE_TASK=yard:stats
 rvm:
-  - '2.1'
-  # jruby fails rake cucumber (see MSP-11240)
-  # - 'jruby-19mode'
-script: "bundle exec rake $RAKE_TASK"
-addons:
-  postgresql: '9.3'
+  - 2.2
+before_install:
+  - gem update bundler
+script: bundle exec rake spec cucumber yard
