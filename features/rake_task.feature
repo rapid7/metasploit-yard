@@ -8,7 +8,8 @@ Feature: yard.rake
   Scenario: Without Rails
     Given I create a clean gemset "without_rails_use_metasploit_yard"
     And I use gemset "without_rails_use_metasploit_yard"
-    And I successfully run `bundle gem without_rails_use_metasploit_yard`
+    And I successfully run `gem install bundler`
+    And I successfully run `bundle gem without_rails_use_metasploit_yard --test=rspec`
     And I cd to "without_rails_use_metasploit_yard"
     And I overwrite "without_rails_use_metasploit_yard.gemspec" with:
       """
@@ -32,6 +33,7 @@ Feature: yard.rake
 
         spec.add_development_dependency 'bundler'
         spec.add_development_dependency 'rake'
+        spec.add_development_dependency 'rspec', '~> 3.0'
         spec.add_development_dependency 'metasploit-yard'
       end
       """
