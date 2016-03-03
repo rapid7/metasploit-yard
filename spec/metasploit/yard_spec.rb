@@ -8,7 +8,7 @@ RSpec.describe Metasploit::Yard do
       }
 
       it 'is Metasploit::Yard::Version.full' do
-        expect(version).to eq(Metasploit::Yard::Version.full)
+        expect(version).to eq(Metasploit::Yard::version)
       end
     end
   end
