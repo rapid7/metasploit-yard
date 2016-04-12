@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.1'
 
   # assert_valid_keys
-  spec.add_development_dependency 'activesupport', '< 4.2'
+  spec.add_development_dependency 'activesupport', '~> 4.2.6'
   spec.add_development_dependency 'aruba'
   spec.add_development_dependency 'bundler'
   # spec.add_development_dependency 'codeclimate-test-reporter'
