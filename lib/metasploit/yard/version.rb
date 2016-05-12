@@ -1,7 +1,7 @@
 module Metasploit
   module Yard
     # VERSION is managed by GemRelease
-    VERSION = '1.1.0'
+    VERSION = '2.0.0'
     
     # @return [String]
     #
