@@ -6,6 +6,6 @@ rvm:
 before_install:
   - gem update bundler
 script:
-  -bundle exec rake spec
-  -bundle exec rake cucumber
-  -bundle exec rake yard
+  - bundle exec rake spec
+  - bundle exec rake cucumber
+  - bundle exec rake yard
