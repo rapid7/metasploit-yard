@@ -2,7 +2,7 @@ group: stable
 sudo: false
 language: ruby
 rvm:
-  - 2.3.1
+  - 2.3.2
 before_install:
   - gem update bundler
 script:
