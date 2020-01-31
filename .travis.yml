@@ -2,9 +2,9 @@ group: stable
 sudo: false
 language: ruby
 rvm:
-  - 2.3.2
+  - 2.6.5
 before_install:
-  - gem update bundler
+  - gem install bundler
 script:
   - bundle exec rake spec
   - bundle exec rake cucumber
