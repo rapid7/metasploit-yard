@@ -1,0 +1,15 @@
+---
+info:
+  title: Metasploit Yard
+  description: The YARD tasks used across metasploit projects
+  x-cortex-git:
+    github:
+      alias: r7org
+      repository: rapid7/metasploit-yard
+  x-cortex-tag: metasploit-yard
+  x-cortex-type: service
+  x-cortex-domain-parents:
+  - tag: metasploit
+openapi: 3.0.1
+servers:
+- url: "/"
